@@ -1,15 +1,15 @@
-<%=  form_tag :blogger do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :bio %>
-    <%= f.text_field :bio , validation %>
-    <%= f.label :age %>
-    <%= f.number_field :age %>
 
-    <%= f.submit %>
-<%end%>
 
-# Attempt to hide/show button based on validation of text-fields
 
-<#% if name_text_field_value != unique ? hide : show button %>
-    <#%= f.submit style={if requirements_not_met ? "Show button" : "Hide"} %>
+<%= form_tag bloggers_path do %>
+    <label>Blogger name:</label><br>
+    <%= text_field_tag :'blogger[name]' %><br>
+  
+    <label>Blogger bio:</label><br>
+    <%= text_area_tag :'blogger[bio]' %><br>
+    
+    <label>Blogger age:</label><br>
+    <%= number_field_tag :'blogger[age]' %><br>
+   
+    <%= submit_tag "Create New Blogger" %>
+  <% end %>
