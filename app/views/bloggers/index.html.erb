@@ -1,0 +1,4 @@
+<%= link_to "New Blogger ", new_blogger_path%><br>
+<% @bloggers.each do |b| %>
+    <%= b.name %><br>
+    <%end%>

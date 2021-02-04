@@ -1,0 +1,29 @@
+User story
+
+# Destination
+    # New/create destination
+    # Index destination
+    # Show for destination
+        # Most recent 5 posts for destination
+        # link to post with most likes
+        # Display average age of bloggers
+# Blogger
+    # New/Create blogger
+        # Unique name
+        # provide age
+        # Bio > 30 characters
+    # Show page of blogger
+        # New post
+        # Edit post
+    # Index of Blogger
+# Post
+    # New/Create Post
+        - choose blogger
+        - choose  destination
+        - title, content
+    # Edit Post
+    # Show post
+        - Display title,content of post
+        - Link to author/blogger
+        - link to destination
+        - like button
