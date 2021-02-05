@@ -8,12 +8,19 @@ class BloggersController < ApplicationController
     # end
 
     def new
-        @blogger = Blogger.new
 
+    end
+    def blogger_params
+        params.require(:blogger).permit(:name,:age,:bio)
     end
 
     def create
-        redirect_to :action => "index"
+        blogger = Blogger.new(blogger_params)
+        if blogger.save
+            redirect_to :action => "index"
+        else
+            render :text => "The servers are on fire"
+        end
     end
         
 
